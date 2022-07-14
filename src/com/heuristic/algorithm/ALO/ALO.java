@@ -86,7 +86,7 @@ public class ALO {
         System.out.println("Best score: "+Elite_antlion_fitness);
     }
 
-    double[][] solution() throws IOException {
+    public double[][] solution() throws IOException {
         init();
         // Main loop start from the second iteration since the first iteration
         // was dedicated to calculating the fitness of antlions
@@ -199,8 +199,8 @@ public class ALO {
             }
 
             arrRandomBestVal[iter-1] = Elite_antlion_position;
-            System.out.println("Iteration: "+(iter));
-            System.out.println("Best score: "+Elite_antlion_fitness);
+//            System.out.println("Iteration: "+(iter));
+//            System.out.println("Best score: "+Elite_antlion_fitness);
             iter++;
         }
 
@@ -214,27 +214,8 @@ public class ALO {
         return out;
     }
 
-    void execute() throws IOException {
-        Result = solution();
-    }
-
-    void toStringNew(String sMessage) throws IOException {
-        System.out.println(sMessage + Result[0][0]);
-
-        for(int i = 0; i < dim;i++) {
-            System.out.println("x["+i+"] = "+ Result[1][i]);
-        }
-
-        System.out.println("----------------------------------------");
-    }
-
-    double[] getBestArray()
-    {
-        return Result[1];
-    }
-
-    double[][] getArrayRandomResult(){
-        return arrRandomBestVal;
+    public double getRes() throws IOException {
+        return Elite_antlion_fitness;
     }
 
     double nextRand(){

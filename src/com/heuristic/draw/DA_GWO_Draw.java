@@ -1,6 +1,6 @@
 package com.heuristic.draw;
 
-import com.test.ExcelUtils;
+import com.heuristic.ExcelUtils;
 import com.heuristic.f_xj;
 import org.apache.commons.math3.special.Gamma;
 
@@ -446,7 +446,7 @@ public class DA_GWO_Draw {
     }
 
     public double getRes() throws IOException {
-        ExcelUtils.fillForDrawFunctionToExcel(F_min, F_avg, X_1, X_2, 63, 153, 244, 335, orderOfF, Max_iteration);
+        ExcelUtils.fillForDrawFunctionToExcel(F_min, F_avg, X_1, X_2, 63, 211, 359, 508, orderOfF, Max_iteration);
         return Best_score;
     }
 

@@ -1,6 +1,6 @@
 package com.heuristic.draw;
 
-import com.test.ExcelUtils;
+import com.heuristic.ExcelUtils;
 import com.heuristic.f_xj;
 
 import java.io.IOException;
@@ -236,7 +236,7 @@ public class GWO_Draw
 
     public double getRes() throws IOException {
         double[][] in=solution();
-        ExcelUtils.fillForDrawFunctionToExcel(F_min, F_avg, X_1, X_2, 5, 95, 186, 277, orderOfF, maxiter);
+        ExcelUtils.fillForDrawFunctionToExcel(F_min, F_avg, X_1, X_2, 5, 153, 301, 450, orderOfF, maxiter);
         return in[0][0];
     }
 

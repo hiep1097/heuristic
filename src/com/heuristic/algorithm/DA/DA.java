@@ -73,7 +73,7 @@ public class DA {
         }
     }
 
-    void solution() throws IOException {
+    public void solution() throws IOException {
         init();
 
         for (int iter=1; iter<=Max_iteration; iter++){

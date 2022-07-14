@@ -51,7 +51,7 @@ public class PSO {
         }
     }
 
-    double[][] solution() throws IOException {
+    public double[][] solution() throws IOException {
         init();
         int iter = 1;
         while(iter <= maxIter) {
@@ -111,8 +111,8 @@ public class PSO {
             }
 
             arrRandomBestVal[iter-1] = swarm.GBEST.X;
-            System.out.println("Iteration: "+iter);
-            System.out.println("Best score: "+swarm.GBEST.O);
+//            System.out.println("Iteration: "+iter);
+//            System.out.println("Best score: "+swarm.GBEST.O);
             iter++;
         }
 
@@ -126,27 +126,8 @@ public class PSO {
         return out;
     }
 
-    void execute() throws IOException {
-        Result = solution();
-    }
-
-    void toStringNew(String sMessage) throws IOException {
-        System.out.println(sMessage + Result[0][0]);
-
-        for(int i = 0; i < dim;i++) {
-            System.out.println("x["+i+"] = "+ Result[1][i]);
-        }
-
-        System.out.println("----------------------------------------");
-    }
-
-    double[] getBestArray()
-    {
-        return Result[1];
-    }
-
-    double[][] getArrayRandomResult(){
-        return arrRandomBestVal;
+    public double getRes() throws IOException {
+        return swarm.GBEST.O;
     }
 
     double nextRand(){

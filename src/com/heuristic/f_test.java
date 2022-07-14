@@ -2,8 +2,8 @@ package com.heuristic;
 
 public class f_test {
     public static String F_name = "f16";
-    public static int maxiter = 500;
-    public static int N = 40;
+    public static int maxiter = 400;
+    public static int N = 30;
     private f_xj f = null;
     private double lb;
     private double ub;

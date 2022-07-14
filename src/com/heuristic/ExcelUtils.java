@@ -1,4 +1,4 @@
-package com.test;
+package com.heuristic;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 public class ExcelUtils {
     public static void fillAvgAndStdToExcel(int N, int max_iteration, int times, double avg[], double std[], int startColumn) throws IOException {
-        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\GWO\\tonghop.xlsx";
+        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\thesis\\ketqua\\tonghop1.xlsx";
         File file = new File(excelFilePath);
         FileInputStream inputStream = new FileInputStream(file);
         Workbook workbook = new XSSFWorkbook(inputStream);
@@ -43,7 +43,7 @@ public class ExcelUtils {
     }
 
     public static void fillBestScoreToExcel(double [][] bestScore, int numOfF, int times, int startRow) throws IOException {
-        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\GWO\\tonghop.xlsx";
+        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\thesis\\ketqua\\tonghop1.xlsx";
         File file = new File(excelFilePath);
         FileInputStream inputStream = new FileInputStream(file);
         Workbook workbook = new XSSFWorkbook(inputStream);
@@ -67,7 +67,7 @@ public class ExcelUtils {
     }
 
     public static void fillPValueToExcel(double [] pvalue_DAGWO_DA, double [] pvalue_DAGWO_GWO, double [] pvalue_GWO_DA, int numOfF) throws IOException {
-        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\GWO\\tonghop.xlsx";
+        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\thesis\\ketqua\\tonghop1.xlsx";
         File file = new File(excelFilePath);
         FileInputStream inputStream = new FileInputStream(file);
         Workbook workbook = new XSSFWorkbook(inputStream);
@@ -98,7 +98,7 @@ public class ExcelUtils {
     public static void fillForDrawFunctionToExcel(double [] Fmin, double [] Favg, double [] X_1, double [] X_2,
                                                   int startRowFmin, int startRowFavg, int startRowX1, int startRowX2,
                                                   int orderOfF, int maxIter) throws IOException {
-        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\GWO\\tonghop.xlsx";
+        String excelFilePath = "C:\\Users\\HOANG\\Desktop\\thesis\\ketqua\\tonghop1.xlsx";
         File file = new File(excelFilePath);
         FileInputStream inputStream = new FileInputStream(file);
         Workbook workbook = new XSSFWorkbook(inputStream);
